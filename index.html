@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>JarJar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+<!-- partial:index.partial.html -->
+<div class="grid" ng-app="app">
+  <div class="grid__col" ng-repeat="game in $root.games">
+    <div class="game" ng-style="{'background-image': 'url({{ game.background }})' }">
+      <div class="game__overlay"></div>
+      <div class="game__logo">
+        <img class="game__logo__image" ng-src="{{ game.logo }}" />
+        
+        {{ game.name }}
+        {{ game.divider }}
+        {{ game.version }}
+      </div>
+      <div class="game__description">
+        {{ game.game__discription}}
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
